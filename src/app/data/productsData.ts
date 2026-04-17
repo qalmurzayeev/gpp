@@ -1,0 +1,258 @@
+export interface Product {
+  id: string;
+  nameKk: string;
+  nameEn: string;
+  nameRu: string;
+  category: string;
+  categoryKk: string;
+  categoryEn: string;
+  categoryRu: string;
+  image: string;
+  descriptionKk: string;
+  descriptionEn: string;
+  descriptionRu: string;
+  specifications: {
+    labelKk: string;
+    labelEn: string;
+    labelRu: string;
+    value: string;
+  }[];
+  standards: string[];
+  applicationsKk: string[];
+  applicationsEn: string[];
+  applicationsRu: string[];
+  featured?: boolean;
+}
+
+export const products: Product[] = [
+  {
+    id: 'gate-valve-nrs',
+    nameKk: 'Шиберлі клапан NRS',
+    nameEn: 'Gate Valve NRS',
+    nameRu: 'Задвижка NRS',
+    category: 'valves',
+    categoryKk: 'Клапандар',
+    categoryEn: 'Valves',
+    categoryRu: 'Клапаны',
+    image: 'https://images.unsplash.com/photo-1570466371266-438db08a9bdd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlciUyMHBpcGUlMjB2YWx2ZSUyMGNsb3NldXB8ZW58MXx8fHwxNzc2NDA5NzI4fDA&ixlib=rb-4.1.0&q=80&w=1080',
+    descriptionKk: 'Жоғары қысымға арналған сенімді шиберлі клапан. UL/FM сертификаты бар.',
+    descriptionEn: 'Reliable gate valve for high-pressure applications. UL/FM certified.',
+    descriptionRu: 'Надежная задвижка для высокого давления. Сертифицирована UL/FM.',
+    specifications: [
+      { labelKk: 'Өлшемі', labelEn: 'Size', labelRu: 'Размер', value: '2"-12"' },
+      { labelKk: 'Қысым', labelEn: 'Pressure', labelRu: 'Давление', value: 'PN10-PN40' },
+      { labelKk: 'Материал', labelEn: 'Material', labelRu: 'Материал', value: 'Cast Iron, Ductile Iron' },
+      { labelKk: 'Температура', labelEn: 'Temperature', labelRu: 'Температура', value: '-10°C ~ 120°C' },
+    ],
+    standards: ['ANSI B16.10', 'UL/FM', 'ISO 5752', 'BS EN558-1'],
+    applicationsKk: ['Сумен жабдықтау', 'Өрт сөндіру жүйелері', 'Өнеркәсіп'],
+    applicationsEn: ['Water Supply', 'Fire Protection', 'Industry'],
+    applicationsRu: ['Водоснабжение', 'Пожаротушение', 'Промышленность'],
+    featured: true,
+  },
+  {
+    id: 'butterfly-valve',
+    nameKk: 'Көбелек клапаны',
+    nameEn: 'Butterfly Valve',
+    nameRu: 'Дисковый затвор',
+    category: 'valves',
+    categoryKk: 'Клапандар',
+    categoryEn: 'Valves',
+    categoryRu: 'Клапаны',
+    image: 'https://images.unsplash.com/photo-1769012334805-eb47a65b5d54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaXBlJTIwZml0dGluZ3MlMjBpbmR1c3RyaWFsfGVufDF8fHx8MTc3NjQwOTcyOHww&ixlib=rb-4.1.0&q=80&w=1080',
+    descriptionKk: 'Шапшаң жұмыс істейтін көбелек клапаны. Төмен қысымға арналған.',
+    descriptionEn: 'Quick-acting butterfly valve. Designed for low-pressure systems.',
+    descriptionRu: 'Быстродействующий дисковый затвор. Для систем низкого давления.',
+    specifications: [
+      { labelKk: 'Өлшемі', labelEn: 'Size', labelRu: 'Размер', value: '2"-24"' },
+      { labelKk: 'Қысым', labelEn: 'Pressure', labelRu: 'Давление', value: 'PN6-PN16' },
+      { labelKk: 'Материал', labelEn: 'Material', labelRu: 'Материал', value: 'Ductile Iron, Stainless Steel' },
+      { labelKk: 'Температура', labelEn: 'Temperature', labelRu: 'Температура', value: '-20°C ~ 150°C' },
+    ],
+    standards: ['API 609', 'EN 593', 'ISO 5211'],
+    applicationsKk: ['HVAC жүйелері', 'Сумен жабдықтау', 'Технологиялық процестер'],
+    applicationsEn: ['HVAC Systems', 'Water Supply', 'Process Control'],
+    applicationsRu: ['Системы HVAC', 'Водоснабжение', 'Процессы управления'],
+    featured: true,
+  },
+  {
+    id: 'check-valve',
+    nameKk: 'Кері клапан',
+    nameEn: 'Check Valve',
+    nameRu: 'Обратный клапан',
+    category: 'valves',
+    categoryKk: 'Клапандар',
+    categoryEn: 'Valves',
+    categoryRu: 'Клапаны',
+    image: 'https://images.unsplash.com/photo-1570466371266-438db08a9bdd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlciUyMHBpcGUlMjB2YWx2ZSUyMGNsb3NldXB8ZW58MXx8fHwxNzc2NDA5NzI4fDA&ixlib=rb-4.1.0&q=80&w=1080',
+    descriptionKk: 'Кері ағынды болдырмайтын сенімді клапан. Тік және көлденең орнатуға болады.',
+    descriptionEn: 'Reliable check valve preventing backflow. Suitable for vertical and horizontal installation.',
+    descriptionRu: 'Надежный обратный клапан, предотвращающий обратный поток. Для вертикальной и горизонтальной установки.',
+    specifications: [
+      { labelKk: 'Өлшемі', labelEn: 'Size', labelRu: 'Размер', value: '1"-12"' },
+      { labelKk: 'Қысым', labelEn: 'Pressure', labelRu: 'Давление', value: 'PN10-PN25' },
+      { labelKk: 'Материал', labelEn: 'Material', labelRu: 'Материал', value: 'Bronze, Cast Iron, Stainless Steel' },
+      { labelKk: 'Температура', labelEn: 'Temperature', labelRu: 'Температура', value: '-10°C ~ 100°C' },
+    ],
+    standards: ['API 6D', 'BS 5153', 'ANSI B16.34'],
+    applicationsKk: ['Насос жүйелері', 'Сумен жабдықтау', 'Химиялық өнеркәсіп'],
+    applicationsEn: ['Pump Systems', 'Water Supply', 'Chemical Industry'],
+    applicationsRu: ['Насосные системы', 'Водоснабжение', 'Химическая промышленность'],
+    featured: true,
+  },
+  {
+    id: 'centrifugal-pump',
+    nameKk: 'Центробежді насос',
+    nameEn: 'Centrifugal Pump',
+    nameRu: 'Центробежный насос',
+    category: 'pumps',
+    categoryKk: 'Насостар',
+    categoryEn: 'Pumps',
+    categoryRu: 'Насосы',
+    image: 'https://images.unsplash.com/photo-1693463735697-73df1f35930d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwY2VudHJpZnVnYWwlMjBwdW1wfGVufDF8fHx8MTc3NjQwOTcyOHww&ixlib=rb-4.1.0&q=80&w=1080',
+    descriptionKk: 'Жоғары өнімділікті центробежді насос. Өнеркәсіптік қолданысқа арналған.',
+    descriptionEn: 'High-efficiency centrifugal pump. Designed for industrial applications.',
+    descriptionRu: 'Высокоэффективный центробежный насос. Для промышленных применений.',
+    specifications: [
+      { labelKk: 'Қуаты', labelEn: 'Power', labelRu: 'Мощность', value: '5-200 HP' },
+      { labelKk: 'Өнімділігі', labelEn: 'Flow Rate', labelRu: 'Производительность', value: '10-500 m³/h' },
+      { labelKk: 'Биіктігі', labelEn: 'Head', labelRu: 'Напор', value: '10-100 m' },
+      { labelKk: 'Материал', labelEn: 'Material', labelRu: 'Материал', value: 'Cast Iron, Stainless Steel' },
+    ],
+    standards: ['ISO 2858', 'API 610', 'ANSI B73.1'],
+    applicationsKk: ['Сумен жабдықтау', 'Өрт сөндіру', 'Өнеркәсіптік процестер'],
+    applicationsEn: ['Water Supply', 'Fire Fighting', 'Industrial Processes'],
+    applicationsRu: ['Водоснабжение', 'Пожаротушение', 'Промышленные процессы'],
+    featured: true,
+  },
+  {
+    id: 'pipe-elbow',
+    nameKk: 'Құбыр тізбегі',
+    nameEn: 'Pipe Elbow',
+    nameRu: 'Отвод трубный',
+    category: 'fittings',
+    categoryKk: 'Арматура',
+    categoryEn: 'Fittings',
+    categoryRu: 'Арматура',
+    image: 'https://images.unsplash.com/photo-1769012334805-eb47a65b5d54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaXBlJTIwZml0dGluZ3MlMjBpbmR1c3RyaWFsfGVufDF8fHx8MTc3NjQwOTcyOHww&ixlib=rb-4.1.0&q=80&w=1080',
+    descriptionKk: '45° және 90° бұрышты құбыр тізбектері. Әртүрлі материалдар.',
+    descriptionEn: '45° and 90° pipe elbows. Various materials available.',
+    descriptionRu: 'Отводы трубные 45° и 90°. Различные материалы.',
+    specifications: [
+      { labelKk: 'Өлшемі', labelEn: 'Size', labelRu: 'Размер', value: '1/2"-24"' },
+      { labelKk: 'Бұрышы', labelEn: 'Angle', labelRu: 'Угол', value: '45°, 90°' },
+      { labelKk: 'Материал', labelEn: 'Material', labelRu: 'Материал', value: 'Carbon Steel, Stainless Steel' },
+      { labelKk: 'Қысым', labelEn: 'Pressure', labelRu: 'Давление', value: 'SCH 10-SCH 160' },
+    ],
+    standards: ['ASME B16.9', 'ANSI B16.28', 'DIN 2605'],
+    applicationsKk: ['Трубопровод жүйелері', 'Химиялық өнеркәсіп', 'Мұнай-газ'],
+    applicationsEn: ['Piping Systems', 'Chemical Industry', 'Oil & Gas'],
+    applicationsRu: ['Трубопроводные системы', 'Химическая промышленность', 'Нефть и газ'],
+    featured: true,
+  },
+  {
+    id: 'flanged-tee',
+    nameKk: 'Фланецті тройник',
+    nameEn: 'Flanged Tee',
+    nameRu: 'Фланцевый тройник',
+    category: 'fittings',
+    categoryKk: 'Арматура',
+    categoryEn: 'Fittings',
+    categoryRu: 'Арматура',
+    image: 'https://images.unsplash.com/photo-1769012334805-eb47a65b5d54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaXBlJTIwZml0dGluZ3MlMjBpbmR1c3RyaWFsfGVufDF8fHx8MTc3NjQwOTcyOHww&ixlib=rb-4.1.0&q=80&w=1080',
+    descriptionKk: 'Жоғары сапалы фланецті тройниктер. Әртүрлі конфигурациялар.',
+    descriptionEn: 'High-quality flanged tees. Various configurations available.',
+    descriptionRu: 'Высококачественные фланцевые тройники. Различные конфигурации.',
+    specifications: [
+      { labelKk: 'Өлшемі', labelEn: 'Size', labelRu: 'Размер', value: '2"-24"' },
+      { labelKk: 'Түрі', labelEn: 'Type', labelRu: 'Тип', value: 'Equal, Reducing' },
+      { labelKk: 'Материал', labelEn: 'Material', labelRu: 'Материал', value: 'Ductile Iron, Carbon Steel' },
+      { labelKk: 'Қысым', labelEn: 'Pressure', labelRu: 'Давление', value: 'PN10-PN40' },
+    ],
+    standards: ['ANSI B16.9', 'EN 10253', 'DIN 2615'],
+    applicationsKk: ['Сумен жабдықтау', 'Өрт сөндіру', 'Өнеркәсіп'],
+    applicationsEn: ['Water Supply', 'Fire Protection', 'Industry'],
+    applicationsRu: ['Водоснабжение', 'Пожаротушение', 'Промышленность'],
+    featured: true,
+  },
+  {
+    id: 'grooved-coupling',
+    nameKk: 'Ойықты муфта',
+    nameEn: 'Grooved Coupling',
+    nameRu: 'Желобковое соединение',
+    category: 'fittings',
+    categoryKk: 'Арматура',
+    categoryEn: 'Fittings',
+    categoryRu: 'Арматура',
+    image: 'https://images.unsplash.com/photo-1769012334805-eb47a65b5d54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaXBlJTIwZml0dGluZ3MlMjBpbmR1c3RyaWFsfGVufDF8fHx8MTc3NjQwOTcyOHww&ixlib=rb-4.1.0&q=80&w=1080',
+    descriptionKk: 'Жылдам орнату үшін ойықты муфталар. UL/FM сертификаты.',
+    descriptionEn: 'Grooved couplings for fast installation. UL/FM certified.',
+    descriptionRu: 'Желобковые соединения для быстрого монтажа. Сертификат UL/FM.',
+    specifications: [
+      { labelKk: 'Өлшемі', labelEn: 'Size', labelRu: 'Размер', value: '1"-12"' },
+      { labelKk: 'Түрі', labelEn: 'Type', labelRu: 'Тип', value: 'Rigid, Flexible' },
+      { labelKk: 'Материал', labelEn: 'Material', labelRu: 'Материал', value: 'Ductile Iron' },
+      { labelKk: 'Қысым', labelEn: 'Pressure', labelRu: 'Давление', value: 'PN16-PN25' },
+    ],
+    standards: ['UL/FM', 'ANSI/AWWA C606', 'EN 14525'],
+    applicationsKk: ['Өрт сөндіру', 'HVAC', 'Сумен жабдықтау'],
+    applicationsEn: ['Fire Protection', 'HVAC', 'Water Supply'],
+    applicationsRu: ['Пожаротушение', 'HVAC', 'Водоснабжение'],
+    featured: true,
+  },
+  {
+    id: 'ball-valve',
+    nameKk: 'Шарлы клапан',
+    nameEn: 'Ball Valve',
+    nameRu: 'Шаровой кран',
+    category: 'valves',
+    categoryKk: 'Клапандар',
+    categoryEn: 'Valves',
+    categoryRu: 'Клапаны',
+    image: 'https://images.unsplash.com/photo-1570466371266-438db08a9bdd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlciUyMHBpcGUlMjB2YWx2ZSUyMGNsb3NldXB8ZW58MXx8fHwxNzc2NDA5NzI4fDA&ixlib=rb-4.1.0&q=80&w=1080',
+    descriptionKk: 'Толық ашылатын және жабылатын шарлы клапан. Өте төмен қысым құлауымен.',
+    descriptionEn: 'Full bore ball valve. Minimal pressure drop.',
+    descriptionRu: 'Полнопроходной шаровой кран. Минимальная потеря давления.',
+    specifications: [
+      { labelKk: 'Өлшемі', labelEn: 'Size', labelRu: 'Размер', value: '1/2"-12"' },
+      { labelKk: 'Қысым', labelEn: 'Pressure', labelRu: 'Давление', value: 'PN16-PN63' },
+      { labelKk: 'Материал', labelEn: 'Material', labelRu: 'Материал', value: 'Brass, Stainless Steel' },
+      { labelKk: 'Түрі', labelEn: 'Type', labelRu: 'Тип', value: 'Full Bore, Reduced Bore' },
+    ],
+    standards: ['API 6D', 'BS 5351', 'ISO 17292'],
+    applicationsKk: ['Газ жүйелері', 'Су жүйелері', 'Мұнай өнеркәсібі'],
+    applicationsEn: ['Gas Systems', 'Water Systems', 'Oil Industry'],
+    applicationsRu: ['Газовые системы', 'Водные системы', 'Нефтяная промышленность'],
+    featured: true,
+  },
+];
+
+export const productCategories = [
+  {
+    id: 'valves',
+    nameKk: 'Клапандар',
+    nameEn: 'Valves',
+    nameRu: 'Клапаны',
+    descriptionKk: 'Әртүрлі типтегі клапандар',
+    descriptionEn: 'Various types of valves',
+    descriptionRu: 'Различные типы клапанов',
+  },
+  {
+    id: 'pumps',
+    nameKk: 'Насостар',
+    nameEn: 'Pumps',
+    nameRu: 'Насосы',
+    descriptionKk: 'Центробежді және басқа насостар',
+    descriptionEn: 'Centrifugal and other pumps',
+    descriptionRu: 'Центробежные и другие насосы',
+  },
+  {
+    id: 'fittings',
+    nameKk: 'Арматура',
+    nameEn: 'Fittings',
+    nameRu: 'Арматура',
+    descriptionKk: 'Құбыр арматурасы және жалғастырғыштар',
+    descriptionEn: 'Pipe fittings and connectors',
+    descriptionRu: 'Трубопроводная арматура и соединители',
+  },
+];
