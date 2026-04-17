@@ -16,7 +16,7 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
-  base: '/ggp/',
+  base: '/gpp/',
 
   plugins: [
     figmaAssetResolver(),
